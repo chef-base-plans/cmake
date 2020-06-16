@@ -1,1 +1,2 @@
-command_relative_path: '/bin/cmake'
+plan_name: 'cmake'
+command_relative_path: 'bin/cmake'
