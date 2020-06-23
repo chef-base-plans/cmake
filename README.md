@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.cmake?branchName=master)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=69&branchName=master)
+[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.cmake?branchName=master)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=101&branchName=master)
 
 # cmake
 
@@ -39,6 +39,23 @@ will add the following binaries to the PATH:
 * /bin/cmake
 * /bin/ctest
 * /bin/cpack
+
+For example:
+
+```bash
+$ hab pkg install core/cmake --binlink
+» Installing core/cmake
+☁ Determining latest version of core/cmake in the 'stable' channel
+→ Found newer installed version (core/cmake/3.17.2/20200603132255) than remote version (core/cmake/3.17.2/20200601115812)
+→ Using core/cmake/3.17.2/20200603132255
+★ Install of core/cmake/3.17.2/20200603132255 complete with 0 new packages installed.
+» Binlinking cmake from core/cmake/3.17.2/20200603132255 into /bin
+★ Binlinked cmake from core/cmake/3.17.2/20200603132255 to /bin/cmake
+» Binlinking ctest from core/cmake/3.17.2/20200603132255 into /bin
+★ Binlinked ctest from core/cmake/3.17.2/20200603132255 to /bin/ctest
+» Binlinking cpack from core/cmake/3.17.2/20200603132255 into /bin
+★ Binlinked cpack from core/cmake/3.17.2/20200603132255 to /bin/cpack
+```
 
 #### Using an example binary
 
