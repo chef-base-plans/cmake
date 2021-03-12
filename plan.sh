@@ -1,13 +1,13 @@
 pkg_name=cmake
 pkg_origin=core
-_base_version=3.17
-pkg_version=${_base_version}.2
+_base_version=3.20.0-rc4
+pkg_version=${_base_version}
 pkg_maintainer='The Habitat Maintainers <humans@habitat.sh>'
 pkg_license=('BSD-3-Clause')
 pkg_description="CMake is an open-source, cross-platform family of tools designed to build, test and package software"
 pkg_upstream_url="https://cmake.org/"
 pkg_source="https://cmake.org/files/v${_base_version}/cmake-${pkg_version}.tar.gz"
-pkg_shasum=fc77324c4f820a09052a7785549b8035ff8d3461ded5bbd80d252ae7d1cd3aa5
+pkg_shasum=34cda5a38a627e799658d8bb15982701ca5e542e112d88396d42596a03037c7c
 pkg_deps=(
   core/glibc
   core/gcc-libs
