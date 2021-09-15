@@ -1,13 +1,13 @@
 pkg_name=cmake
 pkg_origin=core
-_base_version=3.17
-pkg_version=${_base_version}.2
+_base_version=3.20
+pkg_version=${_base_version}.3
 pkg_maintainer='The Habitat Maintainers <humans@habitat.sh>'
 pkg_license=('BSD-3-Clause')
 pkg_description="CMake is an open-source, cross-platform family of tools designed to build, test and package software"
 pkg_upstream_url="https://cmake.org/"
 pkg_source="https://cmake.org/files/v${_base_version}/cmake-${pkg_version}.tar.gz"
-pkg_shasum=fc77324c4f820a09052a7785549b8035ff8d3461ded5bbd80d252ae7d1cd3aa5
+pkg_shasum=4d008ac3461e271fcfac26a05936f77fc7ab64402156fb371d41284851a651b8
 pkg_deps=(
   core/glibc
   core/gcc-libs
@@ -27,8 +27,6 @@ pkg_include_dirs=(include)
 pkg_bin_dirs=(bin)
 
 do_prepare() {
-  # This disables a test that incorrectly detects that a file has write access
-  patch -p0 < "$PLAN_CONTEXT"/patches/000-disable_test_file_access.patch
   # This disables two tests that will always fail in a Habitat build environment
   patch -p0 < "$PLAN_CONTEXT"/patches/001-disable-failing-bundleutlities-tests.patch
 }
